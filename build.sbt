@@ -266,7 +266,6 @@ lazy val libraryPI = new ProjectInfo("runtime/library", isCross = true, macrosPI
 lazy val libraryT = toSbtCrossProject(
   libraryPI,
   slangSettings ++ Seq(
-    Test / testOptions += Tests.Argument(TestFrameworks.ScalaTest, "-l", "SireumRuntime"),
     libraryDependencies ++= Seq(
       "org.scala-lang.platform" %%% "scalajson" % scalajsonVersion,
       "org.scalatest" %%% "scalatest" % scalaTestVersion % "test",
